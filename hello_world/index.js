@@ -1,3 +1,3 @@
 function sayHello() {
-    document.getElementById("hello").innerText = "Hello Worls!"
+    document.getElementById("hello").innerText == "Hello World!";
 }
