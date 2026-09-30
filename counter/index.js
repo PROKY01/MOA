@@ -6,38 +6,73 @@ if("serviceWorker" in navigator) {
         })
         .catch(error => {
             console.log("SW registration failed: ", error);
-        })
+        });
     });
 }
 
-//premenna proulozeni hodnoty citace
+//promenna pro ulozeni hodnoty citace
 let counter = 0;
 //konstanty pro minimum a maximum
-const MAX_COUNSTER_VAL = 10;
-const MIN_COUNSTER_VAL = -10;
+const MAX_COUNTER_VAL = 10;
+const MIN_COUNTER_VAL = -10;
 
 function add() {
-    if(counter < MAX_COUNSTER_VAL){
+    if(counter < MAX_COUNTER_VAL) {
         //zvys counter
         counter++;
-        //vypis aktualnihodnotu dospanu
+        //vypis aktualni hodnotu do toho spanu
         document.getElementById("counter_span").innerText = counter;
     }
 }
 
 function sub() {
-    if(counter > MIN_COUNSTER_VAL){
+    if(counter > MIN_COUNTER_VAL) {
         //sniz counter
         counter--;
-        //vypis aktualnihodnotu dospanu
+        //vypis aktualni hodnotu do toho spanu
         document.getElementById("counter_span").innerText = counter;
     }
 }
 
 function reset() {
-    
-    //zvys counter
+    //resetuj counter
     counter = 0;
-    //vypis aktualnihodnotu dospanu
+    //vypis aktualni hodnotu do toho spanu
+    document.getElementById("counter_span").innerText = counter;
+}
+
+function upravCounter(operation) {
+
+    //kontrola double checkboxu
+    let pom = 1;
+    if(document.getElementById("double_check").checked) {
+        //ano check box je zatrhnuty
+        pom = 2;
+    }
+
+    //podle operace provedeme akci
+    switch(operation) {
+        case "add":
+            if(counter < MAX_COUNTER_VAL) {
+                counter = counter + pom;
+                //counter += pom;
+            }
+            break;
+        case "sub":
+            if(counter > MIN_COUNTER_VAL) {
+                //counter = counter - pom;
+                counter -= pom;
+            }
+            break;
+        case "reset":
+            counter = 0;
+            break;
+    }
+    //vypiseme aktualizovany counter do labelu
+    document.getElementById("counter_span").innerText = counter;
+}
+
+//funkce ktera se spusti pri kazdem obnoveni stranky
+window.onload = function() {
     document.getElementById("counter_span").innerText = counter;
 }
