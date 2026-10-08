@@ -21,5 +21,13 @@ const vlogisekImg = document.getElementById("vlogisekImg");
 vlogisekSwitch.addEventListener("change", zmenObrazek);
 
 function zmenObrazek(event) {
-    
+    //kdyz to vleze sem tak vime ze se stala zmena
+    if(vlogisekSwitch.checked) {
+        //kdyz to spadne sem, muselo to byt z off->on
+        vlogisekImg.src = "./vlogisek.gif"
+    }
+    else {
+        //kdyz to spadne sem, muselo to byt z on->off
+        vlogisekImg.src = "./vlogisek.png"
+    }
 }
