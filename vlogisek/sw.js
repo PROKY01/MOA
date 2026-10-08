@@ -7,7 +7,6 @@ const cacheAssets = [
   "/style.css",
   "/index.js",
   "/icon512.png",
-  "/icon128.png",
   "/vlogisek.png",
   "/vlogisek.gif"
 ];
