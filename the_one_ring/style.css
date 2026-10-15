@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+#ring_img {
+    width: 300px;
+}
+.swith{
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    border: 1px solid magenta;
+    transition: 0.4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: lime;
+    border-radius: 50%;
+    transition: 0.4s; 
+}
+input:checked + .slider {
+    background-color: blue;
+}
+
+/* posun slideru pri zapinani / vypinani */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
