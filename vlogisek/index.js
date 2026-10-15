@@ -12,10 +12,9 @@ if("serviceWorker" in navigator) {
 
 //ulozime si tagy do konstanty
 //tohle je ten prepinac/checkbox
-const switch_darkness = document.getElementById("switch_darkness");
-const switch_evil = document.getElementById("switch_evil");
+const switch_darkness = document.getElementById("vlogisekSwitch");
 //jeste se mi hodi obrazek
-const vlogisekImg = document.getElementById("ring_img");
+const vlogisekImg = document.getElementById("vlogisekImg");
 
 //pridame posluchace udalosti
 //pri zmene se spusti funkce zmenObrazek
@@ -25,10 +24,10 @@ function zmenObrazek(event) {
     //kdyz to vleze sem tak vime ze se stala zmena
     if(vlogisekSwitch.checked) {
         //kdyz to spadne sem, muselo to byt z off->on
-        vlogisekImg.src = "./TheOneRing02.png"
+        vlogisekImg.src = "./vlogisek.gif"
     }
     else {
         //kdyz to spadne sem, muselo to byt z on->off
-        vlogisekImg.src = "./TheOneRing02.png"
+        vlogisekImg.src = "./vlogisek.png"
     }
 }
