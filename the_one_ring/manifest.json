@@ -1,0 +1,14 @@
+{
+    "name": "PWA The One Ring",
+    "short_name": "The One Ring",
+    "description": "Jednoducha PWA The One Ring",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
