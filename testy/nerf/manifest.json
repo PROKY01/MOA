@@ -1,0 +1,14 @@
+{
+    "name": "PWA NERF Mega MotoStryke",
+    "short_name": "NERF Mega",
+    "description": "Jednoducha PWA Vlogisek NERF Mega MotoStryke",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
