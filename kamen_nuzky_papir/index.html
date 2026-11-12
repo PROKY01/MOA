@@ -13,14 +13,18 @@
         <h1>Kamen Nuzky Papir </h1>
         </br>
         <h2>Hrac</h2>
-        <p>Kamen: <input type="radio" id="kamen"/></p>
-        <p>Nuzky: <input type="radio" id="nuzky"/></p>
-        <p>Papir: <input type="radio" id="papir"/></p>
-        <button>Hraj</button>
+        <div>
+            <table>
+                    <tr><td>Kamen: </td><td><input type="radio" name="hrac" value="kamen" checked/> </td> </tr>
+                    <tr><td>Nuzky: </td><td><input type="radio" name="hrac" value="nuzky"/> </td> </tr>
+                    <tr><td>Papir: </td><td><input type="radio" name="hrac" value="papir"/> </td> </tr>
+            </table>
+            <button onclick="hra()" id="play_btn">Hraj</button>
+        </div>
         <h2>Pocitac</h2>
-        <div></div>
+        <div id="cpu_label"></div>
         <h2>Vysledek</h2>
-        <div></div>
+        <div id="result_label"></div>
         
     </div>
 </body>
