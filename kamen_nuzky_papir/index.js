@@ -24,4 +24,55 @@ function hra() {
     console.log("pocitac zvolil: " + volby[index]);
     //vypis volby pocitace
     document.getElementById("cpu_label").innerText = volby[index];
+
+let vysledek;    
+//vyhodnoceni hry
+//nejdrive switch podle pocitace
+switch(volby[index]) {   
+    case "Kamen":
+        //nyni switch podle hrace
+        switch(hrac) {   
+            case "Kamen":
+                vysledek = "Remiza";
+                break;
+            case "Nuzky":
+                vysledek = "Prohra";
+                break;
+            case "Papir":
+                vysledek = "Vyhra";
+                break;
+        }
+        break;
+    case "Nuzky":
+        //nyni switch podle hrace
+        switch(hrac) {   
+            case "Kamen":
+                vysledek = "Vyhra";
+                break;
+            case "Nuzky":
+                vysledek = "Remiza";
+                break;
+            case "Papir":
+                vysledek = "Prohra";
+                break;
+        }
+        break;
+    case "Papir":
+        //nyni switch podle hrace
+        switch(hrac) {   
+            case "Kamen":
+                vysledek = "Prohra";
+                break;
+            case "Nuzky":
+                vysledek = "Vyhra";
+                break;
+            case "Papir":
+                vysledek = "Remiza";
+                break;
+        }
+        break;
+}
+
+//vypis vysledku
+document.getElementById("result_label").innerText = vysledek;
 }
